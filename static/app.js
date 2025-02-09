@@ -17,10 +17,6 @@ document.getElementById('upload-form').addEventListener('submit', function(event
         document.getElementById('confidence').value = data.confidence.toFixed(2);
         document.getElementById('survival-advice').value = data.survival_advice;
 
-        // Removed the code that updates the image path
-        // const imagePath = data.image_path; 
-        // document.getElementById('output-img').src = imagePath;
-
         // Show the output section
         document.getElementById('output').style.display = 'block';
     })
