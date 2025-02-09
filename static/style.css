@@ -1,48 +1,78 @@
 /* Global styling */
 html, body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100%;
+    background: linear-gradient(to bottom right, #6dbf76, #2b8f4d); /* Green gradient background */
 }
 
+/* Center the content and give a nice padding */
 .container {
     width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #ffffff;  /* White background for container */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+/* Heading with vibrant color */
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
+/* Form styling */
 form {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 input[type="file"] {
-    font-size: 1rem;
-    padding: 10px;
+    font-size: 14px;
+    padding: 12px 15px;
     margin-right: 10px;
+    border: 2px solid #a3d8a5; /* Lighter shade of green for border */
+    border-radius: 5px;
+    background-color: #f2f9f2;  /* Light green background for text boxes */
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;  /* Font set to Times New Roman */
+    transition: border 0.3s ease-in-out;
 }
 
+input[type="file"]:focus {
+    border-color: #6dbf76;  /* Focus border color in green */
+    outline: none;
+}
+
+/* Button styling */
 button {
-    font-size: 1rem;
-    padding: 10px 20px;
+    font-size: 1.1rem;
+    padding: 12px 30px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #6dbf76;  /* Green button */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #2b8f4d;  /* Darker green on hover */
+    transform: scale(1.05);  /* Slight zoom effect */
 }
 
+/* Button with margin for spacing */
+button + button {
+    margin-top: 20px;
+}
+
+/* Output section styling */
 #output {
     margin-top: 30px;
 }
@@ -52,11 +82,32 @@ button:hover {
     color: #333;
 }
 
-/* Ensure the image is responsive and has a max-width */
+/* Image styling */
 #output-img {
     max-width: 100%;
     height: auto;
-    border: 1px solid #ddd;  /* Optional: adds a border around the image */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Add subtle shadow around image */
     margin-top: 20px;
 }
 
+/* Responsive styling */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    input[type="file"] {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}

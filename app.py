@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, jsonify, render_template  # Added render_template
+from flask import Flask, render_template, redirect, request, jsonify  # Added render_template
 from werkzeug.utils import secure_filename
 import tensorflow as tf
 import numpy as np
@@ -53,10 +53,13 @@ def modify_image(img):
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-# Route to render the HTML page (no need to look inside templates folder anymore)
 @app.route('/')
+def home():
+    return render_template('home.html')  # Show homepage first
+
+@app.route('/index')
 def index():
-    return render_template('index.html')  # Flask will now look for this in the root directory
+    return render_template('index.html')  # Redirected page
 
 # Function to get survival advice
 def get_survival_advice(description):

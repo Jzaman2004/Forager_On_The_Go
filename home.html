@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            margin: 10px auto;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Forager On The Go</h1>
+        <p>This application allows you to upload an image and get survival advice based on the prediction.</p>
+        
+        <!-- First button (GitHub Codespace link) -->
+        <button onclick="window.location.href='https://psychic-space-waddle-v6674vqx5qq5hpqvj-5000.app.github.dev/'">
+            Welcome
+        </button>
+        
+        <!-- Second button (Index page) -->
+        <button onclick="window.location.href='/index'">
+            Get Started
+        </button>
+    </div>
+</body>
+</html>
