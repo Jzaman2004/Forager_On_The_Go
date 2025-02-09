@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Upload an Image for Prediction</h1>
+    
+    <!-- Form for uploading an image -->
+    <form id="upload-form" enctype="multipart/form-data">
+        <input type="file" name="file" id="file-input" accept="image/*" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    <!-- Section to display prediction and survival advice -->
+    <div id="output" style="display:none;">
+        <h2>Description:</h2>
+        <textarea id="description" rows="4" cols="50" readonly></textarea>
+        <h3>Confidence:</h3>
+        <textarea id="confidence" rows="2" cols="50" readonly></textarea>
+        <h3>Survival Advice:</h3>
+        <!-- Increased the size of the Survival Advice text box -->
+        <textarea id="survival-advice" rows="24" cols="200" readonly></textarea>
+        <!-- Removed the image section here -->
+    </div>
+
+    <!-- JS for handling form submission -->
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
